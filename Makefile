@@ -4,14 +4,15 @@ CC = gcc
 CFLAGS := -std=c99 -Wall -Wextra -pedantic
 SRC_DIR := src
 OBJ_DIR := obj
+FILE_NAME := test
 
-all: test
+all: $(FILE_NAME)
 
 run:
-	$(OBJ_DIR)/test
+	$(OBJ_DIR)/$(FILE_NAME)
 
-test:
-	gcc -std=c99 $(SRC_DIR)/test.c -o $(OBJ_DIR)/test
+$(FILE_NAME):
+	gcc -std=c99 $(SRC_DIR)/$(FILE_NAME).c -o $(OBJ_DIR)/$(FILE_NAME)
 
 clean:
 	rm -f $(OBJ_DIR)/*
