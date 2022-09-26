@@ -5,6 +5,8 @@ CFLAGS := -std=c99 -Wall -Wextra -pedantic
 SRC_DIR := src
 OBJ_DIR := obj
 
+all: test
+
 run:
 	$(OBJ_DIR)/test
 
